@@ -16,10 +16,16 @@ function linkedList(){
             current.newNextNode = newNode;
         }
     }
+    
+    const prepend = (value) => {
+        const newNode = node(value);
+        newNode.newNextNode = head;
+        head = newNode;
+    }
 
     const getHead = () => head;
 
-    return { append, getHead }
+    return { append, prepend, getHead }
 }
 
 export { linkedList }
