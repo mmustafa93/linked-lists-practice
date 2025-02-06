@@ -5,4 +5,4 @@ const myList = linkedList();
 myList.append(10);
 myList.append(20);
 
-console.log(myList.firstNode()); 
+console.log(myList.lastNode()); 

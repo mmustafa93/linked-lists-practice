@@ -43,7 +43,16 @@ function linkedList(){
         return head.newValue;
     } 
 
-    return { append, prepend, getHead, size, firstNode }
+    const lastNode = () => {
+        if (!head) return null;
+        let current = head;
+        while (current.newNextNode){
+            current = current.newNextNode
+            }
+        return current;
+    }
+
+    return { append, prepend, getHead, size, firstNode, lastNode }
 }
 
 export { linkedList }
