@@ -38,7 +38,12 @@ function linkedList(){
         return count
     }
 
-    return { append, prepend, getHead, size }
+    const firstNode = () => {
+        if (!head) return null;
+        return head.newValue;
+    } 
+
+    return { append, prepend, getHead, size, firstNode }
 }
 
 export { linkedList }
