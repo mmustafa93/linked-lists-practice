@@ -139,7 +139,25 @@ function linkedList(){
 
     }
 
-    return { append, prepend, getHead, size, firstNode, lastNode, at, pop, contains, find, toString, insertAt }
+    const removeAt = (index) => {
+        let current = head;
+        let count = 0;
+        if (index === 0){
+            head = current.newNextNode;
+        }
+        
+
+        while (current && count < index - 1){
+            count++;
+            current = current.newNextNode;
+        }
+
+        if (!current || !current.newNextNode) return null;
+        
+        current.newNextNode = current.newNextNode.newNextNode;
+    }
+
+    return { append, prepend, getHead, size, firstNode, lastNode, at, pop, contains, find, toString, insertAt, removeAt }
 }
 
 export { linkedList }

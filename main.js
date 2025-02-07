@@ -7,4 +7,5 @@ myList.append(20);
 myList.append(30);
 
 myList.insertAt(101, 1)
+myList.removeAt(0)
 console.log(myList.toString()); 
