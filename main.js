@@ -7,4 +7,4 @@ myList.append(20);
 myList.append(30);
 
 
-console.log(myList.find(310)); 
+console.log(myList.toString()); 

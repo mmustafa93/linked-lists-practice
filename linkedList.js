@@ -106,7 +106,19 @@ function linkedList(){
         return null;
     }
 
-    return { append, prepend, getHead, size, firstNode, lastNode, at, pop, contains, find }
+    const toString = () => {
+        let current = head;
+        let string = "";
+        while (current) {
+            string += `( ${current.newValue} ) -> `;
+            current = current.newNextNode;
+        }
+    
+        string += "null";
+        return string;
+    }
+
+    return { append, prepend, getHead, size, firstNode, lastNode, at, pop, contains, find, toString }
 }
 
 export { linkedList }
