@@ -118,7 +118,28 @@ function linkedList(){
         return string;
     }
 
-    return { append, prepend, getHead, size, firstNode, lastNode, at, pop, contains, find, toString }
+    const insertAt = (value, index) => {
+        if (index === 0){
+            head = node(value, head);
+            return;
+        }
+        
+        let current = head;
+        let count = 0;
+
+        while (current && count < index - 1){ // find the node that should be before the new node, hence index - 1
+            count++;
+            current = current.newNextNode;
+        }
+        
+        if (!current) return null;
+
+        let newNode = node(value, current.newNextNode);
+        current.newNextNode = newNode;
+
+    }
+
+    return { append, prepend, getHead, size, firstNode, lastNode, at, pop, contains, find, toString, insertAt }
 }
 
 export { linkedList }
