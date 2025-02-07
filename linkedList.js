@@ -52,7 +52,21 @@ function linkedList(){
         return current;
     }
 
-    return { append, prepend, getHead, size, firstNode, lastNode }
+    const at = (index) => {
+        if (!head) return null;
+        let current = head;
+        let count = 0;
+        while (current){
+            if (count === index){
+                return current
+            };
+            current = current.newNextNode;
+            count++;
+        }
+        return null;
+    }
+
+    return { append, prepend, getHead, size, firstNode, lastNode, at }
 }
 
 export { linkedList }
