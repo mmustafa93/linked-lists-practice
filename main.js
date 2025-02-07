@@ -6,5 +6,5 @@ myList.append(10);
 myList.append(20);
 myList.append(30);
 
-myList.pop()
-console.log(myList.contains(10)); 
+
+console.log(myList.find(310)); 

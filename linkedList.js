@@ -93,7 +93,20 @@ function linkedList(){
         return false;
     }
 
-    return { append, prepend, getHead, size, firstNode, lastNode, at, pop, contains }
+    const find = (value) => {
+        let current = head;
+        let count = 0;
+        while (current){
+            if (current.newValue === value){
+                return count;
+            }
+            count++
+            current = current.newNextNode;
+        }
+        return null;
+    }
+
+    return { append, prepend, getHead, size, firstNode, lastNode, at, pop, contains, find }
 }
 
 export { linkedList }
