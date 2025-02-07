@@ -82,7 +82,18 @@ function linkedList(){
         current.newNextNode = null;
     }
 
-    return { append, prepend, getHead, size, firstNode, lastNode, at, pop }
+    const contains = (value) => {
+        let current = head;
+        while (current){
+            if (current.newValue === value){
+                return true;
+            }
+            current = current.newNextNode;
+        }
+        return false;
+    }
+
+    return { append, prepend, getHead, size, firstNode, lastNode, at, pop, contains }
 }
 
 export { linkedList }

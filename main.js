@@ -7,4 +7,4 @@ myList.append(20);
 myList.append(30);
 
 myList.pop()
-console.log(myList.getHead()); 
+console.log(myList.contains(10)); 
