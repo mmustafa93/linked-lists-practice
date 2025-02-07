@@ -4,5 +4,7 @@ const myList = linkedList();
 
 myList.append(10);
 myList.append(20);
+myList.append(30);
 
-console.log(myList.at(11)); 
+myList.pop()
+console.log(myList.getHead()); 

@@ -66,7 +66,23 @@ function linkedList(){
         return null;
     }
 
-    return { append, prepend, getHead, size, firstNode, lastNode, at }
+    const pop = () => {
+        if (!head) return null;
+        if (head.newNextNode === null){
+            head = null;
+            return;
+        };
+
+        let current = head;
+
+        while (current.newNextNode && current.newNextNode.newNextNode){
+            current = current.newNextNode;
+        }
+
+        current.newNextNode = null;
+    }
+
+    return { append, prepend, getHead, size, firstNode, lastNode, at, pop }
 }
 
 export { linkedList }
